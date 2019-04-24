@@ -41,7 +41,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=".getenv('ACCOUNT_NAME').";AccountKey=".getenv('ACCOUNT_KEY');
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=".getenv('dra97webapp').";AccountKey=".getenv('O7rttguLheohWJ6NixEQoO26puypqm18fa8CnOAh+KdE6quIGlKuRglWjtcsoU5P80VF7eXTiHiOoaWUtkRBnQ==');
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
@@ -69,8 +69,8 @@ if (!isset($_GET["Cleanup"])) {
     $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
 
     // Set container metadata.
-    $createContainerOptions->addMetaData("key1", "value1");
-    $createContainerOptions->addMetaData("key2", "value2");
+    $createContainerOptions->addMetaData("key1", "O7rttguLheohWJ6NixEQoO26puypqm18fa8CnOAh+KdE6quIGlKuRglWjtcsoU5P80VF7eXTiHiOoaWUtkRBnQ==");
+    $createContainerOptions->addMetaData("key2", "XFQdc/+zWDR7WQCdn3BrTmCLjr8MYfWZP+rcC8ASt6kCWDqDMjl1rBDURd9Ft37S+27tLWjQFo6jza3fHG1knQ==");
 
       $containerName = "blockblobs".generateRandomString();
 
